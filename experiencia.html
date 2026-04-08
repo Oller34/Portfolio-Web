@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Oller | Experiência</title>
+    <style>
+        /* CSS BASE REFORÇADO */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #111 0%, #000 100%);
+        }
+
+        .header-name {
+            font-size: 2.5rem;
+            color: #00ced1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-botoes { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        
+        .nav-btn {
+            color: #fff; text-decoration: none; padding: 8px 16px;
+            border: 1px solid #333; border-radius: 5px;
+            font-size: 0.8rem; font-weight: bold; transition: 0.3s;
+        }
+
+        .nav-btn:hover { border-color: #00ced1; color: #00ced1; background: rgba(0, 206, 209, 0.05); }
+
+        main { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        .section-title {
+            color: #00ced1; font-size: 1.8rem; margin-bottom: 40px;
+            text-align: center; border-bottom: 2px solid #00ced1;
+            display: table; margin-left: auto; margin-right: auto; padding-bottom: 5px;
+        }
+
+        /* ESTILO DOS CARDS DE EXPERIÊNCIA */
+        .experiencia-item {
+            background-color: #111;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .experiencia-item:hover {
+            border-color: #00ced1;
+            transform: translateX(10px);
+        }
+
+        .experiencia-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .empresa-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid #333;
+        }
+
+        .cargo-titulo { color: #fff; font-size: 1.3rem; }
+        .empresa-nome { color: #00ced1; font-weight: bold; }
+        .data-info { color: #777; font-size: 0.85rem; }
+
+        .lista-tarefas {
+            margin-left: 80px; /* Alinha com o texto do título */
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .lista-tarefas li { margin-bottom: 8px; }
+
+        @media (max-width: 600px) {
+            .experiencia-header { flex-direction: column; text-align: center; }
+            .lista-tarefas { margin-left: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="header-name">Experiência Profissional</h1>
+        <nav class="menu-botoes">
+            <a href="index.html" class="nav-btn">PORTFÓLIO</a>
+            <a href="resumo.html" class="nav-btn">RESUMO</a>
+            <a href="formacao.html" class="nav-btn">FORMAÇÃO</a>
+            <a href="experiencia.html" class="nav-btn">EXPERIÊNCIAS</a>
+            <a href="contato.html" class="nav-btn">CONTATO</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Minha Jornada</h2>
+
+        <div class="experiencia-item">
+            <div class="experiencia-header">
+                <img src="https://media.licdn.com/dms/image/v2/C4E0BAQGsv_gOWh17Hg/company-logo_200_200/company-logo_200_200/0/1630617214619/ortopen_ortopedia_da_penha_logo?e=2147483647&v=beta&t=kMJ5oQwraMuMtPEOIKBzo_JSLVxHn3eBrYfkMjNeDuo" alt="Ortopen" class="empresa-logo">
+                <div>
+                    <h3 class="cargo-titulo">Recepcionista</h3>
+                    <p class="empresa-nome">Clínica Ortopen</p>
+                    <p class="data-info">2023 - Presente</p>
+                </div>
+            </div>
+            <ul class="lista-tarefas">
+                <li>Controle e Validação de Dados: Responsável pela organização e verificação da qualidade de dados cadastrais e financeiros.</li>
+                <li>Otimização de Processos via Excel: Desenvolvimento e aplicação de fórmulas e relatórios em planilhas para otimizar o controle de processos, reduzindo erros manuais e tempo de análise.</li>
+                <li>Análise Financeira Básica: Registro e conferência de movimentações financeiras, garantindo a precisão dos dados para fechamentos mensais.</li>
+            </ul>
+        </div>
+
+        <div class="experiencia-item">
+            <div class="experiencia-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdiHmvUTYyWGlAgaEU3DfuTFVUzQKKjf0ZtQ&s" alt="SAS-seconci" class="empresa-logo">
+                <div>
+                    <h3 class="cargo-titulo">Auxiliar Administrativo</h3>
+                    <p class="empresa-nome">SAS Seconci</p>
+                    <p class="data-info">2021 - 2023</p>
+                </div>
+            </div>
+            <ul class="lista-tarefas">
+                <li>Gestão de Documentação e Processos: Atualização e controle de planilhas e processos internos, assegurando a confiabilidade das informações.</li>
+                <li>Apoio Estratégico e Coordenação: Organização de reuniões e acompanhamento de decisões estratégicas, demonstrando soft skill de comunicação e planejamento. </li>
+                <li>Monitoramento de Produtividade: Controle de produtividade da equipe e geração de relatórios gerenciais para a liderança.</li>
+            </ul>
+        </div>
+
+        <div class="experiencia-item">
+            <div class="experiencia-header">
+                <img src="https://e3ba6e8732e83984.cdn.gocache.net/uploads/image/file/56592/regular_logo.png" alt="cygnus" class="empresa-logo">
+                <div>
+                    <h3 class="cargo-titulo">Auxiliar de Escritório</h3>
+                    <p class="empresa-nome">CYGNUS ARMA</p>
+                    <p class="data-info">2011 - 2013</p>
+                </div>
+            </div>
+            <ul class="lista-tarefas">
+                <li>Análise e Logística de Suprimentos: Controle de suprimentos e análise de demanda, garantindo o abastecimento sem excessos ou faltas.</li>
+                <li>Controle de Inventário: Acompanhamento e registro de materiais em sistema, mantendo a acurácia do estoque.</li>
+                <li>Otimização de Fluxo: Otimização e controle de movimentações logísticas internas.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #444; font-size: 0.8rem;">
+        &copy; 2026 Danilo Alves Oller - Desenvolvido com HTML e CSS
+    </footer>
+
+</body>
+</html>

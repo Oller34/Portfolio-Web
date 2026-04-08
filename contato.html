@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Oller | Contato</title>
+    <style>
+        /* REPRODUZINDO SEU PADRÃO VISUAL */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #111 0%, #000 100%);
+        }
+
+        .header-name {
+            font-size: 2.5rem;
+            color: #00ced1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-botoes { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .nav-btn {
+            color: #fff; text-decoration: none; padding: 8px 16px;
+            border: 1px solid #333; border-radius: 5px;
+            font-size: 0.8rem; font-weight: bold; transition: 0.3s;
+        }
+        .nav-btn:hover { border-color: #00ced1; color: #00ced1; background: rgba(0, 206, 209, 0.05); }
+
+        main { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .section-title {
+            color: #00ced1; font-size: 1.8rem; margin-bottom: 40px;
+            text-align: center; border-bottom: 2px solid #00ced1;
+            display: table; margin-left: auto; margin-right: auto; padding-bottom: 5px;
+        }
+
+        /* --- ESTILO DO FORMULÁRIO E LINKS --- */
+        .contato-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr; /* Divide entre info e form */
+            gap: 40px;
+        }
+
+        .contato-info h3 { color: #00ced1; margin-bottom: 20px; }
+        .social-links { list-style: none; }
+        .social-links li { margin-bottom: 15px; }
+        .social-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .social-links a:hover { color: #00ced1; }
+
+        /* FORMULÁRIO */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            background: #111;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 12px;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #00ced1;
+        }
+
+        button {
+            background: #00ced1;
+            color: #000;
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #008b8b;
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 700px) {
+            .contato-container { grid-template-columns: 1fr; }
+        }
+
+        footer { text-align: center; padding: 40px; color: #444; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="header-name">Vamos Conversar?</h1>
+        <nav class="menu-botoes">
+            <a href="index.html" class="nav-btn">PORTFÓLIO</a>
+            <a href="resumo.html" class="nav-btn">RESUMO</a>
+            <a href="formacao.html" class="nav-btn">FORMAÇÃO</a>
+            <a href="experiencia.html" class="nav-btn">EXPERIÊNCIAS</a>
+            <a href="contato.html" class="nav-btn">CONTATO</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Contato</h2>
+
+        <div class="contato-container">
+            <div class="contato-info">
+                <h3>Minhas Redes</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/in/danilooller/" target="_blank">🔗 LinkedIn</a></li>
+                    <li><a href="https://github.com/Oller34" target="_blank">💻 GitHub</a></li>
+                    <li><a href="mailto:danilo.a.oller@gmail.com">✉️ E-mail Direto</a></li>
+                </ul>
+                <p style="margin-top: 30px; color: #666; font-size: 0.9rem;">
+                    Localizado em São Paulo - SP.
+                </p>
+            </div>
+
+            <form action="https://formspree.io/f/mdapvoqq" method="POST">
+    
+                <label>Seu Nome:</label>
+                <input type="text" name="name" required placeholder="Digite seu nome">
+
+                <label>Seu E-mail:</label>
+                <input type="email" name="email" required placeholder="seuemail@exemplo.com">
+
+                <label>Mensagem:</label>
+                <textarea name="message" required placeholder="Como posso te ajudar?"></textarea>
+
+                <button type="submit" class="nav-btn">ENVIAR MENSAGEM</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Danilo Alves Oller - Desenvolvido com HTML e CSS
+    </footer>
+
+</body>
+</html>

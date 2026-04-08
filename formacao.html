@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Oller | Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* 2. HEADER E NAVEGAÇÃO */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #111 0%, #000 100%);
+        }
+
+        .header-name {
+            font-size: 2.5rem;
+            color: #00ced1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-botoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            border-color: #00ced1;
+            color: #00ced1;
+            background: rgba(0, 206, 209, 0.05);
+        }
+
+        /* 3. CONTEÚDO PRINCIPAL (WRAPPERS) */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            color: #00ced1;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 2px solid #00ced1;
+            display: table; /* Faz a borda acompanhar apenas o texto */
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 5px;
+        }
+
+        /* 4. SEÇÃO DE RESUMO */
+        .welcome-section {
+            background-color: #111;
+            border-left: 5px solid #00ced1;
+            padding: 30px;
+            border-radius: 0 15px 15px 0;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .welcome-section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+  
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            .card {
+                width: 100%;
+            }
+            .header-name {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="header-name">Formação e Cursos</h1>
+        <nav class="menu-botoes">
+            <a href="index.html" class="nav-btn">PORTFÓLIO</a>
+            <a href="resumo.html" class="nav-btn">RESUMO</a>
+            <a href="formacao.html" class="nav-btn">FORMAÇÃO</a>
+            <a href="experiencia.html" class="nav-btn">EXPERIÊNCIAS</a>
+            <a href="contato.html" class="nav-btn">CONTATO</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <p><strong>Faculdade Estácio</strong></p>
+            <p><strong>Curso: </strong>Análise e desenvolvimento de sistemas</p>
+            <p>2° semestre</p>
+            <p><strong>Conclusão: </strong>Dezembro/2027</p>
+        </section>
+
+        <section class="welcome-section">
+            <p><strong>Instituição - Alura</strong></p>
+            <p><strong>Lógica de programação</strong></p>
+            <p>praticando com desafios</p>
+            <p>mergulhe em programação com JavaScript</p>
+            <p>explore funções e listas</p>
+        </section>
+
+        <section class="welcome-section">
+            <p><strong>Instituição - Alura</strong></p>
+            <p><strong>Modelagem de banco de dados</strong></p>
+            <p>entidades, relacionamentos e atributos</p>
+            <p>desenvolvendo o modelo lógico</p>
+            <p>aplicando a normalização</p>
+            <p>construindo o modelo físico</p>
+            <p>identificando entidades, atributos, relacionamentos</p>
+            <p>álgebra relacional</p>
+        </section>
+
+        <section class="welcome-section">
+            <p><strong>Instituição - Udemy</strong></p>
+            <p><strong>Power BI Completo - Do Básico ao Avançado</strong></p>
+            <p>Aprenda do básico ao avançado, tudo o que você precisa saber de Power BI</p>
+            <p>Destaque-se por causa dos seus conhecimentos de Power BI</p>
+            <p>Crie dashboards e relatórios dinâmicos</p>
+            <p>Construa seus próprios relatórios intuitivos e com visual incrível</p>
+            <p>Aprenda gráficos, indicadores, mapas e tudo o que precisa saber de Power BI</p>
+            <p>Aprenda Power BI para usar no que quiser, em seus desafios e ganhe um enorme diferencial</p>
+        </section>
+
+        <section class="welcome-section">
+            <p><strong>Instituição - Udemy</strong></p>
+            <p><strong>SQL: Banco de Dados SQL do Básico ao Avançado</strong></p>
+            <p>História e Evolução do SQL</p>
+            <p>Uso e Aplicação do SQL</p>
+            <p>Instalação e Configuração</p>
+            <p>Banco de Dados</p>
+            <p>Comandos DML e DDL</p>
+            <p>Consultas SQL</p>
+            <p>Ferramentas Avançadas</p>
+        </section>
+
+        <section class="welcome-section">
+            <p><strong>Instituição - Udemy</strong></p>
+            <p><strong>Aprenda SQL do Zero!</strong></p>
+            <p>Conhecer os comandos SQL para Manipulação de Dados</p>
+            <p>Aprender como relacionar tabelas e extratir informações relevantes</p>
+            <p>Descobrir como criar/excluir/alterar tabelas e views</p>
+            <p>Entender o que são índices e porque eles são seus amigos</p>
+            <p>Entender o funcionamento do SQL aplicável a QUALQUER banco relacional</p>
+        </section>
+
+        <section class="welcome-section">
+            <p><strong>Instituição - Impacta</strong></p>
+            <p><strong>Excel - modulo I e II</strong></p>
+            <p>Fórmulas e Funções Avançadas: Fórmulas matriciais, funções de texto, lógicas e de pesquisa avançadas (ex: TEXTO.ANTES, TEXTO.DEPOIS, DIVIDIRTEXTO).</p>
+            <p>Análise de Dados: Criação de Tabelas e Gráficos Dinâmicos profissionais, uso do SOMARPRODUTO, SOMASES e MÉDIASES para relatórios gerenciais.</p>
+            <p>Automação com Macros e VBA: Gravação, edição e criação de macros para automatizar tarefas repetitivas e criar funções personalizadas.</p>
+            <p>Power Query e Power Pivot: Importação, transformação e modelagem de grandes volumes de dados de diversas fontes (PDF, Web, SQL)</p>
+            <p>Dashboards e Interatividade: Desenvolvimento de painéis de indicadores (dashboards) com controles de formulário e segmentação de dados.</p>
+        </section>
+
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #444; font-size: 0.8rem;">
+        &copy; 2026 Danilo Alves Oller - Desenvolvido com HTML e CSS
+    </footer>
+
+</body>
+</html>
+
+

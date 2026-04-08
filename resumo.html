@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Oller | Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* 2. HEADER E NAVEGAÇÃO */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #111 0%, #000 100%);
+        }
+
+        .header-name {
+            font-size: 2.5rem;
+            color: #00ced1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-botoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            border-color: #00ced1;
+            color: #00ced1;
+            background: rgba(0, 206, 209, 0.05);
+        }
+
+        /* 3. CONTEÚDO PRINCIPAL (WRAPPERS) */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            color: #00ced1;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 2px solid #00ced1;
+            display: table; /* Faz a borda acompanhar apenas o texto */
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 5px;
+        }
+
+        /* 4. SEÇÃO DE RESUMO */
+        .welcome-section {
+            background-color: #111;
+            border-left: 5px solid #00ced1;
+            padding: 30px;
+            border-radius: 0 15px 15px 0;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .welcome-section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        /* 5. GRID DE CARDS (SKILLS) */
+        .container-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .card, .projetos {
+            background-color: #161616;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.4s ease;
+            cursor: default;
+        }
+
+        .card:hover, .projetos:hover {
+            border-color: #00ced1;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 206, 209, 0.15);
+            background-color: #1a1a1a;
+        }
+
+        .card h3, .projetos h3 {
+            color: #00ced1;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .card p, .projetos p {
+            font-size: 0.95rem;
+            color: #bbb;
+        }
+
+        .container-projetos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            .card {
+                width: 100%;
+            }
+            .header-name {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="header-name">Resumo Profissional</h1>
+        <nav class="menu-botoes">
+            <a href="index.html" class="nav-btn">PORTFÓLIO</a>
+            <a href="resumo.html" class="nav-btn">RESUMO</a>
+            <a href="formacao.html" class="nav-btn">FORMAÇÃO</a>
+            <a href="experiencia.html" class="nav-btn">EXPERIÊNCIAS</a>
+            <a href="contato.html" class="nav-btn">CONTATO</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <p><strong>Futuro Desenvolvedor e Analista de Dados em formação (ADS)</strong>, com foco em unir lógica de programação à inteligência de negócios.</p>
+            <p>Possuo experiência prática na manipulação de grandes volumes de dados com SQL e Excel, além de desenvolver interfaces web modernas com HTML5 e CSS3 (Flexbox/Grid).</p>
+            <p>Busco atuar em ambientes dinâmicos onde possa aplicar automação com Python, visualização de dados e desenvolvimento de aplicações web funcionais.</p>
+        </section>
+
+        <h2 class="section-title">Habilidades Técnicas</h2>
+
+        <div class="container-cards">
+            <div class="card">
+                <h3>Power BI</h3>
+                <p>DAX, visualizações, integração de dados e Storytelling com dados.</p>
+            </div>
+
+            <div class="card">
+                <h3>SQL</h3>
+                <p>Consultas, Joins, Agregações e Modelagem de Dados (Normalização).</p>
+            </div>
+
+            <div class="card">
+                <h3>Excel Avançado</h3>
+                <p>Tabelas Dinâmicas, Fórmulas Complexas e Automação de Relatórios.</p>
+            </div>
+
+            <div class="card">
+                <h3>Gestão de Dados</h3>
+                <p>Organização, Validação e Otimização de Processos de Negócio.</p>
+            </div>
+        </div>
+        
+        <br>
+        <h2 class="section-title">Projetos Pessoais</h2>
+        <br>
+            <div class="container-projetos">
+            <div class="projetos">
+                <h3>Python</h3>
+                <p>Sistema de Notas Finais</p>
+                <br>
+                <a href="https://github.com/Oller34/Projetos-Python/blob/ca4943d482ec69df0363ed2b69ba793cd8b3591e/Sistema_de_Notas_Finais.ipynb" target="_blank" class="nav-btn">
+                    Ver Código no GitHub
+                </a>
+            </div>
+
+            <div class="projetos">
+                <h3>Python</h3>
+                <p>Cadastro de Jogadores</p>
+                <br>
+                <a href="https://github.com/Oller34/Projetos-Python/blob/ca4943d482ec69df0363ed2b69ba793cd8b3591e/cadastrar_jogador.ipynb" target="_blank" class="nav-btn">
+                    Ver Código no GitHub
+                </a>
+            </div>
+
+        <div class="projetos">
+            <h3>Power BI</h3>
+            <p>Dashboard OrtoData</p>
+            <p style="font-size: 0.8rem; color: #777; margin-bottom: 15px;">Métricas de Consultas</p>
+    
+            <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+            <a href="imagen2.jpg" target="_blank" class="nav-btn" style="width: 100%;">
+            🖼️ Ver Screenshot
+            </a>
+        
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421983433016586240/?originTrackingId=0AGLvN0DD%2BwjojlZUdYWAQ%3D%3D" 
+               target="_blank" class="nav-btn" style="width: 100%; border-color: #0077b5;">
+                🔗 Ver no LinkedIn
+            </a>
+        </div>
+</div>
+
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #444; font-size: 0.8rem;">
+        &copy; 2026 Danilo Alves Oller - Desenvolvido com HTML e CSS
+    </footer>
+
+</body>
+</html>
+
+
