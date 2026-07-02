@@ -5,16 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danilo Oller | Portfólio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        /* 1. RESET E BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             background-color: #000;
             color: #fff;
@@ -45,6 +38,7 @@
         }
 
         .nav-btn {
+            display: inline-block;
             color: #fff;
             text-decoration: none;
             padding: 8px 16px;
@@ -53,6 +47,7 @@
             font-size: 0.8rem;
             font-weight: bold;
             transition: 0.3s;
+            text-align: center;
         }
 
         .nav-btn:hover {
@@ -61,7 +56,7 @@
             background: rgba(0, 206, 209, 0.05);
         }
 
-        /* 3. CONTEÚDO PRINCIPAL (WRAPPERS) */
+        /* 3. CONTEÚDO PRINCIPAL */
         main {
             max-width: 1100px;
             margin: 0 auto;
@@ -71,12 +66,10 @@
         .section-title {
             color: #00ced1;
             font-size: 1.8rem;
-            margin-bottom: 25px;
+            margin: 40px auto 25px auto;
             text-align: center;
             border-bottom: 2px solid #00ced1;
-            display: table; /* Faz a borda acompanhar apenas o texto */
-            margin-left: auto;
-            margin-right: auto;
+            display: table;
             padding-bottom: 5px;
         }
 
@@ -96,58 +89,61 @@
             color: #ccc;
         }
 
-        /* 5. GRID DE CARDS (SKILLS) */
-        .container-cards {
+        /* 5. GRID DE CARDS (SKILLS E PROJETOS) */
+        .grid-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 25px;
+            width: 100%;
         }
 
-        .card, .projetos {
+        .item-card {
             background-color: #161616;
             border: 1px solid #333;
             border-radius: 15px;
             padding: 25px;
-            width: 250px;
+            width: 280px; /* Aumentei um pouco para caber melhor os botões */
             text-align: center;
             transition: all 0.4s ease;
-            cursor: default;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .card:hover, .projetos:hover {
+        .item-card:hover {
             border-color: #00ced1;
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 206, 209, 0.15);
             background-color: #1a1a1a;
         }
 
-        .card h3, .projetos h3 {
+        .item-card h3 {
             color: #00ced1;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
         }
 
-        .card p, .projetos p {
+        .item-card p {
             font-size: 0.95rem;
             color: #bbb;
+            margin-bottom: 15px;
         }
 
-        .container-projetos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
+        .btn-full { width: 100%; margin-top: 10px; }
+
+        /* 6. FOOTER */
+        footer {
+            text-align: center;
+            padding: 60px 40px;
+            color: #444;
+            font-size: 0.85rem;
         }
 
-        /* Responsividade para telas menores */
+        /* RESPONSIVIDADE */
         @media (max-width: 600px) {
-            .card {
-                width: 100%;
-            }
-            .header-name {
-                font-size: 1.8rem;
-            }
+            .item-card { width: 100%; }
+            .header-name { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -165,93 +161,89 @@
     </header>
 
     <main>
+        <!-- RESUMO -->
         <section class="welcome-section">
             <p><strong>Estudante de ADS | Em transição para Análise de Dados e Desenvolvimento Web</strong></p>
-            <p>Cursando o 2º semestre de Análise e Desenvolvimento de Sistemas (ADS), com sólida experiência administrativa e operacional. Desenvolvi um perfil analítico atuando na gestão de dados cadastrais, faturamento e controle de ativos (frotas e estoques).</p>
-            <p>Atualmente, dedico-me ao estudo de Lógica de Programação com Python e tecnologias Front-end (HTML/CSS). Tenho facilidade em identificar oportunidades de melhoria em processos manuais, utilizando ferramentas como o Excel para criar soluções lógicas que otimizam o dia a dia operacional.</p>
+            <p>Cursando o 2º semestre de Análise e Desenvolvimento de Sistemas (ADS), com sólida experiência administrativa e operacional. Desenvolvi um perfil analítico atuando na gestão de dados cadastrais, faturamento e controle de ativos.</p>
+            <p>Atualmente, dedico-me ao estudo de Lógica de Programação com Python e tecnologias Front-end (HTML/CSS). Utilizo ferramentas como o Excel para criar soluções lógicas que otimizam o dia a dia operacional.</p>
             <p>Busco minha primeira oportunidade na área de tecnologia para aplicar meus conhecimentos em desenvolvimento e análise de sistemas.</p>
         </section>
 
+        <!-- HABILIDADES -->
         <h2 class="section-title">Habilidades Técnicas</h2>
-
-        <div class="container-cards">
-            <div class="card">
+        <div class="grid-container">
+            <div class="item-card">
                 <h3>Power BI</h3>
                 <p>DAX, visualizações, integração de dados e Storytelling com dados.</p>
             </div>
-
-            <div class="card">
+            <div class="item-card">
                 <h3>SQL</h3>
                 <p>Consultas, Joins, Agregações e Modelagem de Dados (Normalização).</p>
             </div>
-
-            <div class="card">
+            <div class="item-card">
                 <h3>Excel Avançado</h3>
                 <p>Tabelas Dinâmicas, Fórmulas Complexas e Automação de Relatórios.</p>
             </div>
-
-            <div class="card">
+            <div class="item-card">
                 <h3>Gestão de Dados</h3>
                 <p>Organização, Validação e Otimização de Processos de Negócio.</p>
             </div>
         </div>
-        
-        <br>
+
+        <!-- PROJETOS -->
         <h2 class="section-title">Projetos Pessoais</h2>
-        <br>
-            <div class="container-projetos">
-            <div class="projetos">
+        <div class="grid-container">
+            
+            <!-- Projeto Python 1 -->
+            <div class="item-card">
                 <h3>Python</h3>
                 <p>Sistema de Notas Finais</p>
-                <br>
-                <a href="https://github.com/Oller34/Projetos-Python/blob/ca4943d482ec69df0363ed2b69ba793cd8b3591e/Sistema_de_Notas_Finais.ipynb" target="_blank" class="nav-btn">
-                    Ver Código no GitHub
-                </a>
+                <a href="https://github.com/Oller34/Projetos-Python/blob/ca4943d482ec69df0363ed2b69ba793cd8b3591e/Sistema_de_Notas_Finais.ipynb" target="_blank" class="nav-btn btn-full">Ver Código</a>
             </div>
 
-            <div class="projetos">
+            <!-- Projeto Python 2 -->
+            <div class="item-card">
                 <h3>Python</h3>
                 <p>Cadastro de Jogadores</p>
-                <br>
-                <a href="https://github.com/Oller34/Projetos-Python/blob/ca4943d482ec69df0363ed2b69ba793cd8b3591e/cadastrar_jogador.ipynb" target="_blank" class="nav-btn">
-                    Ver Código no GitHub
-                </a>
+                <a href="https://github.com/Oller34/Projetos-Python/blob/ca4943d482ec69df0363ed2b69ba793cd8b3591e/cadastrar_jogador.ipynb" target="_blank" class="nav-btn btn-full">Ver Código</a>
             </div>
 
-            <div class="projetos">
+            <!-- Projeto Power BI -->
+            <div class="item-card">
                 <h3>Power BI</h3>
-                <p>Dashboard OrtoData</p>
-                <p style="font-size: 0.8rem; color: #777; margin-bottom: 15px;">Métricas de Consultas</p>
-    
-                <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-                <a href="imagen2.jpg" target="_blank" class="nav-btn" style="width: 100%;">
-                🖼️ Ver Screenshot
-                </a>
-        
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421983433016586240/?originTrackingId=0AGLvN0DD%2BwjojlZUdYWAQ%3D%3D" 
-                   target="_blank" class="nav-btn" style="width: 100%; border-color: #0077b5;">
-                    🔗 Ver no LinkedIn
-                </a>
+                <p>Dashboard OrtoData (Métricas de Consultas)</p>
+                <a href="imagen2.jpg" target="_blank" class="nav-btn btn-full">🖼️ Screenshot</a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421983433016586240/" target="_blank" class="nav-btn btn-full" style="border-color: #0077b5;">🔗 LinkedIn</a>
             </div>
+
+            <!-- Projeto Web 1 -->
+            <div class="item-card">
+                <h3>Web Design</h3>
+                <p>Regras de Procedimentos (Sistema Real)</p>
+                <a href="https://oller34.github.io/Regras-de-Conv-nios/" target="_blank" class="nav-btn btn-full">Ver Site</a>
             </div>
-            <div class="projetos">
-               <h3>Site</h3>
-               <p>Site Psicóloga</p>
-             <br>
-                <a href="https://psicologarobertacscorrea.com.br/"target="_blank" class="nav-btn">
-                    Ver Site
-                </a>
+
+            <!-- Projeto Web 2 -->
+            <div class="item-card">
+                <h3>Site Institucional</h3>
+                <p>Site Psicóloga Roberta Cristine</p>
+                <a href="https://psicologarobertacscorrea.com.br/" target="_blank" class="nav-btn btn-full">Ver Site</a>
+            </div>
+
+            <!-- Projeto Power BI 2-->
+            <div class="item-card">
+                <h3>Power BI</h3>
+                <p>Dashboard Produção (Produção Diaria)</p>
+                <a href="dashboard.jpg" target="_blank" class="nav-btn btn-full">🖼️ Screenshot</a>
+                <a href="https://github.com/Oller34/sistema-controle-producao-bi" target="_blank" class="nav-btn btn-full" style="border-color: #0077b5;">🔗 GitHub</a>
             </div>
 
         </div>
-
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: #444; font-size: 0.8rem;">
+    <footer>
         &copy; 2026 Danilo Alves Oller - Desenvolvido com HTML e CSS
     </footer>
 
 </body>
 </html>
-
-
