@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            background-color: #000; /* Fundo Preto */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            overflow-x: hidden; /* Evita barra de rolagem horizontal */
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .profile-container {
+            text-align: center;
+            padding: 50px 40px;
+            border: 3px solid #00ced1; 
+            border-radius: 25px;
+            background-color: rgba(17, 17, 17, 0.8); 
+            box-shadow: 0 0 20px rgba(0, 206, 209, 0.2); 
+            max-width: 500px;
+            width: 90%;
+        }
+
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid #00ced1;
+            object-fit: cover; /* Não deixa a foto esticar */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .btn-more {
+            display: inline-block;
+            padding: 12px 30px;
+            color: #00ced1;
+            text-decoration: none;
+            border: 2px solid #00ced1;
+            border-radius: 50px; /* Botão arredondado */
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-more:hover {
+            background-color: #00ced1;
+            color: #000;
+            box-shadow: 0 0 15px #00ced1;
+            transform: scale(1.05); 
+        }
+
+        .btn-more:active {
+            background-color: #00ced1;
+            color: #000;
+            box-shadow: 0 0 15px #00ced1;
+	    transform: scale(0.98);
+	}
+        .summary-box {
+            max-width: 800px;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        h2 {
+            color: #00ced1;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00ced1;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="profile-container">
+            <img src="imagen1.jpg" alt="Sua Foto" class="profile-img">
+            <h1>Danilo Alves Oller</h1>
+            <a href="resumo.html" class="btn-more">Saiba Mais</a>
+        </div>
+    </section>
+
+</body>
+</html>
+
