@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Alves Oller | Portfólio de Dados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            padding: 0 0 40px 0;
+        }
+
+        /* Cabeçalho & Navegação */
+        header {
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #111 0%, #000 100%);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #00ced1;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .menu-botoes { 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            flex-wrap: wrap; 
+        }
+
+        .nav-btn {
+            color: #fff; 
+            text-decoration: none; 
+            padding: 8px 16px;
+            border: 1px solid #333; 
+            border-radius: 5px;
+            font-size: 0.8rem; 
+            font-weight: bold; 
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover { 
+            border-color: #00ced1; 
+            color: #00ced1; 
+            background: rgba(0, 206, 209, 0.05); 
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Títulos de Seção */
+        .section-title-wrapper {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: #00ced1;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #00ced1;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* SEÇÃO SOBRE MIM */
+        .summary-box {
+            background-color: rgba(17, 17, 17, 0.9);
+            border: 1px solid #333;
+            border-left: 5px solid #00ced1;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .summary-box h2 {
+            color: #00ced1;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .summary-box p {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .summary-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .summary-box strong {
+            color: #fff;
+        }
+
+        /* SEÇÃO HABILIDADES TÉCNICAS */
+        .skills-section {
+            margin-bottom: 60px;
+        }
+
+        .grid-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-card {
+            background-color: rgba(17, 17, 17, 0.9);
+            border: 1px solid rgba(0, 206, 209, 0.3);
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ced1;
+            box-shadow: 0 0 15px rgba(0, 206, 209, 0.2);
+        }
+
+        .skill-card h3 {
+            color: #00ced1;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #aaa;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* SEÇÃO PROJETOS (LAYOUT EM LISTA / CARDS HORIZONTAIS) */
+        .projects-section {
+            margin-bottom: 60px;
+        }
+
+        .list-projects {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: rgba(17, 17, 17, 0.9);
+            border: 2px solid #00ced1;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row; /* Texto na esquerda, Imagem na direita */
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 206, 209, 0.3);
+        }
+
+        .card-body {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            color: #00ced1;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: rgba(0, 206, 209, 0.1);
+            color: #00ced1;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            align-self: flex-start;
+            border: 1px solid rgba(0, 206, 209, 0.3);
+        }
+
+        .insights-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .insights-list li {
+            font-size: 0.95rem;
+            color: #ccc;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .insights-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #00ced1;
+            font-weight: bold;
+        }
+
+        .insights-list strong {
+            color: #fff;
+        }
+
+        .card-img-wrapper {
+            width: 40%;
+            min-width: 300px;
+            height: 100%;
+            min-height: 280px;
+            background-color: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid rgba(0, 206, 209, 0.3);
+            padding: 15px;
+        }
+
+        .card-img {
+            max-width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .btn-github {
+            display: inline-block;
+            text-align: center;
+            padding: 10px 22px;
+            color: #00ced1;
+            text-decoration: none;
+            border: 2px solid #00ced1;
+            border-radius: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .btn-github:hover {
+            background-color: #00ced1;
+            color: #000;
+            box-shadow: 0 0 10px #00ced1;
+        }
+
+        /* RESPONSIVIDADE (Para telas menores/celulares) */
+        @media (max-width: 850px) {
+            .card {
+                flex-direction: column-reverse; /* No celular, a imagem fica em cima e texto embaixo */
+            }
+
+            .card-img-wrapper {
+                width: 100%;
+                min-height: 200px;
+                border-left: none;
+                border-bottom: 1px solid rgba(0, 206, 209, 0.3);
+            }
+
+            .card-body {
+                width: 100%;
+            }
+        }
+
+        /* RODAPÉ & CONTATO */
+        footer { 
+            text-align: center; 
+            padding: 50px 20px 20px 20px; 
+            background: linear-gradient(0deg, #111 0%, #000 100%);
+            border-top: 1px solid #222;
+            margin-top: 60px;
+        }
+
+        .footer-title {
+            color: #00ced1;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .social-btn {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #00ced1;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s ease;
+            background: rgba(0, 206, 209, 0.05);
+        }
+
+        .social-btn:hover {
+            background-color: #00ced1;
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 206, 209, 0.4);
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Danilo Alves Oller</h1>
+        <p class="subtitle">Análise de Dados & Business Intelligence</p>
+        <nav class="menu-botoes">
+            <a href="#contato" class="nav-btn">CONTATO</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="summary-box">
+            <h2>Sobre Mim</h2>
+            <p>
+                Graduando em <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e em transição para a área de Dados. Minha bagagem em rotinas administrativas e processos operacionais me permite analisar dados sempre sob a perspectiva do negócio, identificando onde estão os gargalos e as oportunidades de ganho.
+            </p>
+            
+            <p><strong>O que faço no dia a dia de Dados:</strong></p>
+            <ul style="list-style: none; margin: 10px 0 20px 0;">
+                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Análise & Visualização:</strong> Construção de dashboards interativos no <strong>Power BI</strong> (DAX, Power Query) e <strong>Excel Avançado</strong>, focando em Storytelling e clareza visual.</li>
+                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Consultas & Tratamento:</strong> Modelagem relacional, consultas complexas e Joins em <strong>SQL</strong>, além de processos de ETL.</li>
+                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Programação & Automação:</strong> Análise exploratória e manipulação de dados com <strong>Python</strong> (Pandas, Seaborn, Matplotlib).</li>
+            </ul>
+
+            <p>
+                Busco oportunidades como <strong>Analista de Dados Júnior</strong>, <strong>Analista de BI Júnior</strong> ou <strong>Estagiário de Dados</strong>, ajudando equipes a tomarem decisões mais inteligentes e embasadas.
+            </p>
+        </section>
+
+        <!-- HABILIDADES TÉCNICAS -->
+        <section id="habilidades" class="skills-section">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">Habilidades Técnicas</h2>
+            </div>
+
+            <div class="grid-skills">
+                <div class="skill-card">
+                    <h3>Power BI</h3>
+                    <p>DAX, visualizações interativas, modelagem de dados, integração de fontes e Storytelling com dados.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                    <p>Consultas complexas, Joins, Agregações, View e Modelagem de Dados (Normalização).</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Python para Dados</h3>
+                    <p>Análise Exploratória (Pandas), Visualização (Seaborn/Matplotlib) e automação de scripts.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Excel Avançado</h3>
+                    <p>Tabelas Dinâmicas, Fórmulas de Análise, Power Query e Automação de Relatórios.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS & INSIGHTS (UM EMBAIXO DO OUTRO) -->
+        <section id="projetos" class="projects-section">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">Projetos & Insights Obtidos</h2>
+            </div>
+
+            <div class="list-projects">
+
+                <!-- 1º PROJETO: AMAZON DELIVERY -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Amazon Delivery: Otimização de Entregas</h3>
+                        <span class="tech-badge">SQL • Python • Power BI</span>
+                        <ul class="insights-list">
+                            <li><strong>Identificação de Gargalo Crítico:</strong> A região Semi-Urbana responde por apenas 0,3% do volume total de pedidos (152), mas apresenta tempo médio de 239 min — mais do que o dobro da área urbana (109 min).</li>
+                            <li><strong>Consistência Multi-ferramenta:</strong> Validação cruzada end-to-end de 43.739 pedidos via SQL, Pandas e Power BI.</li>
+                            <li><strong>Recomendação Operacional:</strong> Foco de otimização logística na redistribuição da frota e parceiros locais na região Semi-Urbana.</li>
+                        </ul>
+                        <a href="https://github.com/Oller34/Amazon_Delivery/tree/main" target="_blank" class="btn-github">Ver Repositório GitHub</a>
+                    </div>
+                    <div class="card-img-wrapper">
+                        <img src="Dashboard_amazon.png" alt="Dashboard Amazon Delivery" class="card-img">
+                    </div>
+                </div>
+
+                <!-- 2º PROJETO: IFOOD MARKETING -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Campanha de Marketing iFood</h3>
+                        <span class="tech-badge">Google Sheets • Looker Studio</span>
+                        <ul class="insights-list">
+                            <li><strong>Público-Alvo Estratégico:</strong> Clientes de 40 a 50 anos (solteiros) geraram o maior faturamento total na última campanha.</li>
+                            <li><strong>Cross-Selling Carne & Vinho:</strong> Tendência linear comprovando que compradores de carne consomem vinho com alta frequência.</li>
+                            <li><strong>Ação Recomendada:</strong> Criar ofertas conjuntas (desconto em vinhos para compras acima de R$ 1.000 em carne) para impulsionar o faturamento.</li>
+                        </ul>
+                        <a href="https://github.com/Oller34/Campanha-de-Marketing-Ifood" target="_blank" class="btn-github">Ver Repositório GitHub</a>
+                    </div>
+                    <div class="card-img-wrapper">
+                        <img src="relatorio ifood.png" alt="Relatório de Marketing iFood" class="card-img">
+                    </div>
+                </div>
+
+                <!-- PROJETO PEOPLE ANALYTICS -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Dashboard de People Analytics</h3>
+                        <span class="tech-badge">Power BI • DAX • Excel</span>
+                        <ul class="insights-list">
+                            <li><strong>Mapeamento de Turnover:</strong> Diagnóstico das causas de rotatividade por departamento e tempo de casa.</li>
+                            <li><strong>Equidade Salarial & Diversidade:</strong> Análise de disparidade de remuneração e representatividade em cargos de liderança.</li>
+                            <li><strong>Canais de Recrutamento:</strong> Identificação das fontes de atração com maior retenção e desempenho histórico.</li>
+                        </ul>
+                        <a href="https://github.com/Oller34/Dashboard-de-People-Analytics/tree/main" target="_blank" class="btn-github">Ver Repositório GitHub</a>
+                    </div>
+                    <div class="card-img-wrapper">
+                        <img src="Dashboard de People Analytics.png" alt="Dashboard de People Analytics" class="card-img">
+                    </div>
+                </div>
+
+                <!-- PROJETO E-COMMERCE OLIST -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Performance E-Commerce D2C</h3>
+                        <span class="tech-badge">Power BI • SQL</span>
+                        <ul class="insights-list">
+                            <li><strong>Análise de Faturamento:</strong> Mapeamento do Ticket Médio e sazonalidade de vendas por região.</li>
+                            <li><strong>Gargalos de Entrega:</strong> Correlação direta entre atrasos logísticos e queda nas avaliações dos clientes.</li>
+                            <li><strong>Modelagem Relacional:</strong> Agrupamento de dados via SQL para cálculo acelerado de KPIs executivos.</li>
+                        </ul>
+                        <a href="https://github.com/Oller34/Dashboard-de-Performance-E-commerce-Olist-" target="_blank" class="btn-github">Ver Repositório GitHub</a>
+                    </div>
+                    <div class="card-img-wrapper">
+                        <img src="E-commerce-Olist-.png" alt="Dashboard E-commerce" class="card-img">
+                    </div>
+                </div>
+
+                <!-- PROJETO ORTODATA -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Dashboard OrtoData (Saúde)</h3>
+                        <span class="tech-badge">SQL • Power BI</span>
+                        <ul class="insights-list">
+                            <li><strong>Fluxo de Atendimento:</strong> Acompanhamento em tempo real do volume de consultas e retornos.</li>
+                            <li><strong>Retenção de Pacientes:</strong> Identificação de taxas de ausência e períodos com maior demanda.</li>
+                            <li><strong>Otimização de Agenda:</strong> Apoio visual para redistribuição de horários e eficiência operacionais.</li>
+                        </ul>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421983433016586240/" target="_blank" class="btn-github">Ver no LinkedIn</a>
+                    </div>
+                    <div class="card-img-wrapper">
+                        <img src="OrtoData.jpg" alt="Dashboard OrtoData" class="card-img">
+                    </div>
+                </div>
+
+                <!-- PROJETO PRODUÇÃO -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Controle de Produção Diária</h3>
+                        <span class="tech-badge">SQL • Power BI</span>
+                        <ul class="insights-list">
+                            <li><strong>Acompanhamento de Metas:</strong> Comparativo visual entre volume planejado x volume produzido.</li>
+                            <li><strong>Paradas Operacionais:</strong> Mapeamento dos principais motivos de inatividade na linha de produção.</li>
+                            <li><strong>Rendimento por Turno:</strong> Medição de produtividade diária para tomada de decisão ágil.</li>
+                        </ul>
+                        <a href="https://github.com/Oller34/sistema-controle-producao-bi" target="_blank" class="btn-github">Ver Repositório GitHub</a>
+                    </div>
+                    <div class="card-img-wrapper">
+                        <img src="sistema-controle-produção-bi.jpg" alt="Dashboard de Controle da Produção Diária" class="card-img">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ COM CONTATOS -->
+    <footer id="contato">
+        <h2 class="footer-title">Vamos Conversar?</h2>
+        <div class="social-links">
+            <a href="https://wa.me/5511998969621" target="_blank" class="social-btn">📱 WhatsApp</a>
+            <a href="https://www.linkedin.com/in/danilooller/" target="_blank" class="social-btn">💼 LinkedIn</a>
+            <a href="https://www.instagram.com/danilo_oller" target="_blank" class="social-btn">📸 Instagram</a>
+        </div>
+        <p class="copyright">&copy; 2026 Danilo Alves Oller - Desenvolvido com HTML e CSS</p>
+    </footer>
+
+</body>
+</html>
