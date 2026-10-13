@@ -366,14 +366,14 @@
         <section id="sobre" class="summary-box">
             <h2>Sobre Mim</h2>
             <p>
-                Graduando em <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e em transição para a área de Dados. Minha bagagem em rotinas administrativas e processos operacionais me permite analisar dados sempre sob a perspectiva do negócio, identificando onde estão os gargalos e as oportunidades de ganho.
+                Graduando em <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e em transição para a área de Dados[cite: 9]. Minha bagagem em rotinas administrativas e processos operacionais me permite analisar dados sempre sob a perspectiva do negócio, identificando onde estão os gargalos e as oportunidades de ganho.
             </p>
             
             <p><strong>O que faço no dia a dia de Dados:</strong></p>
             <ul style="list-style: none; margin: 10px 0 20px 0;">
-                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Análise & Visualização:</strong> Construção de dashboards interativos no <strong>Power BI</strong> (DAX, Power Query) e <strong>Excel Avançado</strong>, focando em Storytelling e clareza visual.</li>
-                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Consultas & Tratamento:</strong> Modelagem relacional, consultas complexas e Joins em <strong>SQL</strong>, além de processos de ETL.</li>
-                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Programação & Automação:</strong> Análise exploratória e manipulação de dados com <strong>Python</strong> (Pandas, Seaborn, Matplotlib).</li>
+                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Análise & Visualização:</strong> Construção de dashboards interativos no <strong>Power BI</strong> (DAX, Power Query) e <strong>Excel Avançado</strong>[cite: 9], focando em Storytelling e clareza visual.</li>
+                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Consultas & Tratamento:</strong> Modelagem relacional, consultas complexas e Joins em <strong>SQL</strong>[cite: 9], além de processos de ETL.</li>
+                <li style="margin-bottom: 8px; color: #ccc;"><strong style="color: #00ced1;">• Programação & Automação:</strong> Análise exploratória e manipulação de dados com <strong>Python</strong> (Pandas, Seaborn, Matplotlib)[cite: 9].</li>
             </ul>
 
             <p>
@@ -390,27 +390,27 @@
             <div class="grid-skills">
                 <div class="skill-card">
                     <h3>Power BI</h3>
-                    <p>DAX, visualizações interativas, modelagem de dados, integração de fontes e Storytelling com dados.</p>
+                    <p>DAX, visualizações interativas, modelagem de dados, integração de fontes e Storytelling com dados[cite: 9].</p>
                 </div>
 
                 <div class="skill-card">
                     <h3>SQL</h3>
-                    <p>Consultas complexas, Joins, Agregações, View e Modelagem de Dados (Normalização).</p>
+                    <p>Consultas complexas, Joins, Agregações, View e Modelagem de Dados (Normalização)[cite: 9].</p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Python para Dados</h3>
-                    <p>Análise Exploratória (Pandas), Visualização (Seaborn/Matplotlib) e automação de scripts.</p>
+                    <p>Análise Exploratória (Pandas), Visualização (Seaborn/Matplotlib) e automação de scripts[cite: 9].</p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Excel Avançado</h3>
-                    <p>Tabelas Dinâmicas, Fórmulas de Análise, Power Query e Automação de Relatórios.</p>
+                    <p>Tabelas Dinâmicas, Fórmulas de Análise, Power Query e Automação de Relatórios[cite: 9].</p>
                 </div>
             </div>
         </section>
 
-        <!-- PROJETOS & INSIGHTS (UM EMBAIXO DO OUTRO) -->
+        <!-- PROJETOS & INSIGHTS -->
         <section id="projetos" class="projects-section">
             <div class="section-title-wrapper">
                 <h2 class="section-title">Projetos & Insights Obtidos</h2>
@@ -418,15 +418,32 @@
 
             <div class="list-projects">
 
-                <!-- 1º PROJETO: AMAZON DELIVERY -->
+                <!-- 1º PROJETO: TELCO CUSTOMER CHURN (NOVO) -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Telco Customer Churn: Retenção de Clientes</h3>
+                        <span class="tech-badge">Excel • SQL (SQLite) • Power BI</span>
+                        <ul class="insights-list">
+                            <li><strong>Gargalo de Primeiros Meses:</strong> 49,1% de Churn concentrado nos primeiros 10 meses de contrato (Tenure), exigindo um onboarding proativo[cite: 8].</li>
+                            <li><strong>Contratos de Alto Risco:</strong> Planos mensais (Month-to-month) combinados com *Electronic check* atingem até 54% de cancelamento[cite: 7, 8].</li>
+                            <li><strong>Análise End-to-End:</strong> Validação cruzada da mesma base de 7.043 clientes usando Excel, CTEs em SQL e Dashboard em Dark Mode[cite: 3, 5, 7].</li>
+                        </ul>
+                        <a href="https://github.com/Oller34/Telco-Customer-Churn/tree/main" target="_blank" class="btn-github">Ver Repositório GitHub</a>
+                    </div>
+                    <div class="card-img-wrapper">
+                        <img src="Dashboard_telco.png" alt="Dashboard Telco Customer Churn" class="card-img">
+                    </div>
+                </div>
+
+                <!-- 2º PROJETO: AMAZON DELIVERY -->
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">Amazon Delivery: Otimização de Entregas</h3>
                         <span class="tech-badge">SQL • Python • Power BI</span>
                         <ul class="insights-list">
-                            <li><strong>Identificação de Gargalo Crítico:</strong> A região Semi-Urbana responde por apenas 0,3% do volume total de pedidos (152), mas apresenta tempo médio de 239 min — mais do que o dobro da área urbana (109 min).</li>
-                            <li><strong>Consistência Multi-ferramenta:</strong> Validação cruzada end-to-end de 43.739 pedidos via SQL, Pandas e Power BI.</li>
-                            <li><strong>Recomendação Operacional:</strong> Foco de otimização logística na redistribuição da frota e parceiros locais na região Semi-Urbana.</li>
+                            <li><strong>Identificação de Gargalo Crítico:</strong> A região Semi-Urbana responde por apenas 0,3% do volume total de pedidos (152), mas apresenta tempo médio de 239 min — mais do que o dobro da área urbana (109 min)[cite: 9].</li>
+                            <li><strong>Consistência Multi-ferramenta:</strong> Validação cruzada end-to-end de 43.739 pedidos via SQL, Pandas e Power BI[cite: 9].</li>
+                            <li><strong>Recomendação Operacional:</strong> Foco de otimização logística na redistribuição da frota e parceiros locais na região Semi-Urbana[cite: 9].</li>
                         </ul>
                         <a href="https://github.com/Oller34/Amazon_Delivery/tree/main" target="_blank" class="btn-github">Ver Repositório GitHub</a>
                     </div>
@@ -435,15 +452,15 @@
                     </div>
                 </div>
 
-                <!-- 2º PROJETO: IFOOD MARKETING -->
+                <!-- 3º PROJETO: IFOOD MARKETING -->
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">Campanha de Marketing iFood</h3>
                         <span class="tech-badge">Google Sheets • Looker Studio</span>
                         <ul class="insights-list">
-                            <li><strong>Público-Alvo Estratégico:</strong> Clientes de 40 a 50 anos (solteiros) geraram o maior faturamento total na última campanha.</li>
-                            <li><strong>Cross-Selling Carne & Vinho:</strong> Tendência linear comprovando que compradores de carne consomem vinho com alta frequência.</li>
-                            <li><strong>Ação Recomendada:</strong> Criar ofertas conjuntas (desconto em vinhos para compras acima de R$ 1.000 em carne) para impulsionar o faturamento.</li>
+                            <li><strong>Público-Alvo Estratégico:</strong> Clientes de 40 a 50 anos (solteiros) geraram o maior faturamento total na última campanha[cite: 9].</li>
+                            <li><strong>Cross-Selling Carne & Vinho:</strong> Tendência linear comprovando que compradores de carne consomem vinho com alta frequência[cite: 9].</li>
+                            <li><strong>Ação Recomendada:</strong> Criar ofertas conjuntas (desconto em vinhos para compras acima de R$ 1.000 em carne) para impulsionar o faturamento[cite: 9].</li>
                         </ul>
                         <a href="https://github.com/Oller34/Campanha-de-Marketing-Ifood" target="_blank" class="btn-github">Ver Repositório GitHub</a>
                     </div>
@@ -458,9 +475,9 @@
                         <h3 class="card-title">Dashboard de People Analytics</h3>
                         <span class="tech-badge">Power BI • DAX • Excel</span>
                         <ul class="insights-list">
-                            <li><strong>Mapeamento de Turnover:</strong> Diagnóstico das causas de rotatividade por departamento e tempo de casa.</li>
-                            <li><strong>Equidade Salarial & Diversidade:</strong> Análise de disparidade de remuneração e representatividade em cargos de liderança.</li>
-                            <li><strong>Canais de Recrutamento:</strong> Identificação das fontes de atração com maior retenção e desempenho histórico.</li>
+                            <li><strong>Mapeamento de Turnover:</strong> Diagnóstico das causas de rotatividade por departamento e tempo de casa[cite: 9].</li>
+                            <li><strong>Equidade Salarial & Diversidade:</strong> Análise de disparidade de remuneração e representatividade em cargos de liderança[cite: 9].</li>
+                            <li><strong>Canais de Recrutamento:</strong> Identificação das fontes de atração com maior retenção e desempenho histórico[cite: 9].</li>
                         </ul>
                         <a href="https://github.com/Oller34/Dashboard-de-People-Analytics/tree/main" target="_blank" class="btn-github">Ver Repositório GitHub</a>
                     </div>
@@ -475,9 +492,9 @@
                         <h3 class="card-title">Performance E-Commerce D2C</h3>
                         <span class="tech-badge">Power BI • SQL</span>
                         <ul class="insights-list">
-                            <li><strong>Análise de Faturamento:</strong> Mapeamento do Ticket Médio e sazonalidade de vendas por região.</li>
-                            <li><strong>Gargalos de Entrega:</strong> Correlação direta entre atrasos logísticos e queda nas avaliações dos clientes.</li>
-                            <li><strong>Modelagem Relacional:</strong> Agrupamento de dados via SQL para cálculo acelerado de KPIs executivos.</li>
+                            <li><strong>Análise de Faturamento:</strong> Mapeamento do Ticket Médio e sazonalidade de vendas por região[cite: 9].</li>
+                            <li><strong>Gargalos de Entrega:</strong> Correlação direta entre atrasos logísticos e queda nas avaliações dos clientes[cite: 9].</li>
+                            <li><strong>Modelagem Relacional:</strong> Agrupamento de dados via SQL para cálculo acelerado de KPIs executivos[cite: 9].</li>
                         </ul>
                         <a href="https://github.com/Oller34/Dashboard-de-Performance-E-commerce-Olist-" target="_blank" class="btn-github">Ver Repositório GitHub</a>
                     </div>
@@ -492,9 +509,9 @@
                         <h3 class="card-title">Dashboard OrtoData (Saúde)</h3>
                         <span class="tech-badge">SQL • Power BI</span>
                         <ul class="insights-list">
-                            <li><strong>Fluxo de Atendimento:</strong> Acompanhamento em tempo real do volume de consultas e retornos.</li>
-                            <li><strong>Retenção de Pacientes:</strong> Identificação de taxas de ausência e períodos com maior demanda.</li>
-                            <li><strong>Otimização de Agenda:</strong> Apoio visual para redistribuição de horários e eficiência operacionais.</li>
+                            <li><strong>Fluxo de Atendimento:</strong> Acompanhamento em tempo real do volume de consultas e retornos[cite: 9].</li>
+                            <li><strong>Retenção de Pacientes:</strong> Identificação de taxas de ausência e períodos com maior demanda[cite: 9].</li>
+                            <li><strong>Otimização de Agenda:</strong> Apoio visual para redistribuição de horários e eficiência operacionais[cite: 9].</li>
                         </ul>
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7421983433016586240/" target="_blank" class="btn-github">Ver no LinkedIn</a>
                     </div>
@@ -509,9 +526,9 @@
                         <h3 class="card-title">Controle de Produção Diária</h3>
                         <span class="tech-badge">SQL • Power BI</span>
                         <ul class="insights-list">
-                            <li><strong>Acompanhamento de Metas:</strong> Comparativo visual entre volume planejado x volume produzido.</li>
-                            <li><strong>Paradas Operacionais:</strong> Mapeamento dos principais motivos de inatividade na linha de produção.</li>
-                            <li><strong>Rendimento por Turno:</strong> Medição de produtividade diária para tomada de decisão ágil.</li>
+                            <li><strong>Acompanhamento de Metas:</strong> Comparativo visual entre volume planejado x volume produzido[cite: 9].</li>
+                            <li><strong>Paradas Operacionais:</strong> Mapeamento dos principais motivos de inatividade na linha de produção[cite: 9].</li>
+                            <li><strong>Rendimento por Turno:</strong> Medição de produtividade diária para tomada de decisão ágil[cite: 9].</li>
                         </ul>
                         <a href="https://github.com/Oller34/sistema-controle-producao-bi" target="_blank" class="btn-github">Ver Repositório GitHub</a>
                     </div>
